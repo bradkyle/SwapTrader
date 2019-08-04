@@ -19,7 +19,7 @@ from stable_baselines.common.policies import MlpLnLstmPolicy, CnnPolicy, MlpPoli
 from stable_baselines.common.vec_env import SubprocVecEnv, DummyVecEnv
 from stable_baselines import A2C, ACKTR, PPO2, DDPG, ACER
 from stable_baselines.ddpg.policies import LnMlpPolicy, LnCnnPolicy
-from env.SwapTradingEnv import SwapTradingEnv
+from env.SwapTradingEnv2 import SwapTradingEnv
 import random
 from random import shuffle
 import csv
