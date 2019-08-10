@@ -1,0 +1,11 @@
+./data/
+./tensorboard/
+tensorboard/
+tensorboard
+wandb/
+wandb/*
+./wandb/*
+./data/*
+data/*
+data/
+

@@ -1,0 +1,32 @@
+version: '3'
+services:
+  rethink:
+    image: rethinkdb
+    volumes:
+      - ${PWD}/data:/data
+    ports:
+      - 8080:8080
+      - 28015:28015
+      - 29015:29015
+
+  feature_ingress:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile.feature
+    links:
+    - rethink
+    environment:
+    - PROJECT_ID=braided-complex-247220
+    - TOPIC=output
+    - HOST=rethink
+    - GOOGLE_APPLICATION_CREDENTIALS=/code/sensor_key.json
+    command: python /code/feature_ingress.py
+      
+  # account_ingress:
+  #   build: Dockerfile.account
+  #   links:
+  #   - rethink
+  #   environment:
+  #   - HOST=rethink
+  #   - OKEX_CREDENTIALS=/code/okex_key.json
+  #   command: python /code/ingress.py
