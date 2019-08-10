@@ -133,6 +133,9 @@ class DistSwapTradingEnv(gym.Env):
         obs.columns = clean_names(obs.columns)
         return ind, obs
 
+    def _current_pricel(self):
+        pass
+    
     def _current_price(self):
         self.ind_df[self.price_field].values[self.current_step]
 
