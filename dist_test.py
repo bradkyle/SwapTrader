@@ -26,18 +26,20 @@ import csv
 import time
 import json
 import random
-import sys 
+import sys
+import uuid
 np.set_printoptions(threshold=sys.maxsize)
 
-wandb.config.leverage = 50
+wandb.config.leverage = 60
 wandb.config.initial_balance = 10
-wandb.config.commission = 0.000
+wandb.config.maker_commission = -0.00025
+wandb.config.taker_commission = 0.00075
 wandb.config.reward_func = None
 wandb.config.state_buffer_size = 300
 wandb.config.evaluation_history_size = 300
 wandb.config.account_history_size = 300
 wandb.config.scaler_high = 255
-wandb.config.min_margin_ratio = 0.02
+wandb.config.min_margin_ratio = 0.005
 wandb.config.enable_decay = False
 wandb.config.enable_hold_decay = False
 wandb.config.decay = 0.05
@@ -49,10 +51,11 @@ wandb.config.include_account = False
 wandb.config.min_consec_steps = 0
 wandb.config.num_actions = 2
 wandb.config.obs_type = 'obs_1'
-wandb.config.train_data_file = './data/FRACDIFF_DATA.parquet'
-wandb.config.test_data_file = './data/FRACDIFF_TEST.parquet'
-wandb.config.agent_id = 'ebfae67f-9e55-4c9d-b471-589d38227d5a'
+wandb.config.train_data_file = './data/NODIFF_DATA.parquet'
+wandb.config.test_data_file = './data/NODIFF_TEST.parquet'
 wandb.config.env_name = 'DistSwapTradingEnv'
+wandb.config.train_steps = 137000
+wandb.config.agent_id = 'da5edbd1-4112-4361-b46c-eb47cfb0519a'
 
 env = DummyVecEnv(
         [lambda: DistSwapTradingEnv(

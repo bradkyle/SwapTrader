@@ -16,7 +16,6 @@ import pyarrow.parquet as pq
 import pyarrow as pa
 import logging
 import random
-from env.SwapTradingGraph import SwapTradingGraph
 import json
 import random
 
@@ -132,12 +131,9 @@ class DistSwapTradingEnv(gym.Env):
         obs = df[FEATURES]
         obs.columns = clean_names(obs.columns)
         return ind, obs
-
-    def _current_pricel(self):
-        pass
     
     def _current_price(self):
-        self.ind_df[self.price_field].values[self.current_step]
+        return self.ind_df[self.price_field].values[self.current_step]
 
     @property
     def _rand(self):

@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd 
 import ta 
-import pylab as pl
+# import pylab as pl
 import re
 import joblib
 import uuid

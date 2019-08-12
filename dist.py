@@ -31,7 +31,7 @@ np.set_printoptions(threshold=sys.maxsize)
 
 agent_id = str(uuid.uuid4())
 
-wandb.config.leverage = 80
+wandb.config.leverage = 60
 wandb.config.initial_balance = 10
 wandb.config.maker_commission = -0.00025
 wandb.config.taker_commission = 0.00075
@@ -40,7 +40,7 @@ wandb.config.state_buffer_size = 300
 wandb.config.evaluation_history_size = 300
 wandb.config.account_history_size = 300
 wandb.config.scaler_high = 255
-wandb.config.min_margin_ratio = 0.02
+wandb.config.min_margin_ratio = 0.005
 wandb.config.enable_decay = False
 wandb.config.enable_hold_decay = False
 wandb.config.decay = 0.05
