@@ -1,3 +1,6 @@
+./agents/
+agents/*
+agents
 ./data/
 ./tensorboard/
 tensorboard/
