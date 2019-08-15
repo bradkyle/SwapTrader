@@ -112,7 +112,7 @@ if short_delta > 0:
         "type": str(orderType.OPEN_SHORT),
         "match_price": "0"
     })
-elif long_delta < 0:
+elif short_delta < 0:
     # Close Short
     orders.append({
         "client_oid": "closeshort"+str(current_time),

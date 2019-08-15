@@ -153,6 +153,13 @@ class EvalInterval(Enum):
    FIFTEEN_MINUTES = 90
    
 
+class side(Enum):
+    SELL = 1
+    BUY = 2
+
+    def __str__(self):
+        return '%s' % self.value
+
 Dist = collections.namedtuple(
     'Dist', 
     [
@@ -162,44 +169,16 @@ Dist = collections.namedtuple(
     ]
 )
 
-Account = collections.namedtuple(
-    'Account', 
-    [
-    'equity',
-    'margin',
-    'margin_frozen',
-    'margin_ratio',
-    'realized_pnl',
-    'unrealized_pnl',
-    'total_available_balance',
-    'long_avail_position', # positions available to be closed
-    'long_avg_cost',
-    'long_leverage',
-    'long_liquidation_price',
-    'long_margin',
-    'long_position',
-    'long_realized_pnl',
-    'long_settlement_price',
-    'short_avail_position',
-    'short_avg_cost',
-    'short_leverage',
-    'short_liquidation_price',
-    'short_margin',
-    'short_position',
-    'short_realized_pnl',
-    'short_settlement_price',
-    'rate_limited',
-    'cost',
-    'delta'
-    ]
-)
 
-Info = collections.namedtuple(
-    'Info',
-    list(Account._fields)+[
-        'current_price',
-        'action',
-        'consec_decay',
-        'reward'
+State = collections.namedtuple(
+    'State',
+    [
+        'bid_qty',
+        'bid_price',
+        'last',
+        'ask_price',
+        'ask_qty',
+        'markPrice',
+        'fundingRate'
     ]
 )

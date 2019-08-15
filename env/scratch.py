@@ -1,95 +1,168 @@
-[
-            {
-                "account": 235781,
-                "avgCostPrice": 11405.1095,
-                "avgEntryPrice": 11405.1095,
-                "bankruptPrice": 13592,
-                "breakEvenPrice": 11219.5,
-                "commission": 0.00075,
-                "crossMargin": true,
-                "currency": "XBt",
-                "currentComm": 18957,
-                "currentCost": 3546131,
-                "currentQty": -400,
-                "currentTimestamp": "2019-08-12T21:37:30.096Z",
-                "deleveragePercentile": 1,
-                "execBuyCost": 0,
-                "execBuyQty": 0,
-                "execComm": 8530,
-                "execCost": 11389191,
-                "execQty": -1299,
-                "execSellCost": 11389191,
-                "execSellQty": 1299,
-                "foreignNotional": 400,
-                "grossExecCost": 3507065,
-                "grossOpenCost": 33405958,
-                "grossOpenPremium": 0,
-                "homeNotional": -0.035096,
-                "indicativeTax": 0,
-                "indicativeTaxRate": 0,
-                "initMargin": 384420,
-                "initMarginReq": 0.01,
-                "isOpen": true,
-                "lastPrice": 11397.7,
-                "lastValue": 3509600,
-                "leverage": 100,
-                "liquidationPrice": 13511.5,
-                "longBankrupt": 0,
-                "maintMargin": 40264,
-                "maintMarginReq": 0.005,
-                "marginCallPrice": 13511.5,
-                "markPrice": 11397.7,
-                "markValue": 3509600,
-                "openOrderBuyCost": -18726100,
-                "openOrderBuyPremium": 0,
-                "openOrderBuyQty": 2100,
-                "openOrderSellCost": -33010868,
-                "openOrderSellPremium": 0,
-                "openOrderSellQty": 3801,
-                "openingComm": 10427,
-                "openingCost": -7843060,
-                "openingQty": 899,
-                "openingTimestamp": "2019-08-12T21:00:00.000Z",
-                "posAllowance": 0,
-                "posComm": 2657,
-                "posCost": 3507064,
-                "posCost2": 3507064,
-                "posCross": 0,
-                "posInit": 35071,
-                "posLoss": 0,
-                "posMaint": 20193,
-                "posMargin": 37728,
-                "posState": "",
-                "prevClosePrice": 11421.36,
-                "prevRealisedPnl": 0,
-                "prevUnrealisedPnl": 0,
-                "quoteCurrency": "USD",
-                "realisedCost": 39067,
-                "realisedGrossPnl": -39067,
-                "realisedPnl": -58024,
-                "realisedTax": 0,
-                "rebalancedPnl": 0,
-                "riskLimit": 20000000000,
-                "riskValue": 36915558,
-                "sessionMargin": 0,
-                "shortBankrupt": 0,
-                "simpleCost": null,
-                "simplePnl": null,
-                "simplePnlPcnt": null,
-                "simpleQty": null,
-                "simpleValue": null,
-                "symbol": "XBTUSD",
-                "targetExcessMargin": 0,
-                "taxBase": 0,
-                "taxableMargin": 0,
-                "timestamp": "2019-08-12T21:37:31.892Z",
-                "underlying": "XBT",
-                "unrealisedCost": 3507064,
-                "unrealisedGrossPnl": 2536,
-                "unrealisedPnl": 2536,
-                "unrealisedPnlPcnt": 0.0007,
-                "unrealisedRoePcnt": 0.0723,
-                "unrealisedTax": 0,
-                "varMargin": 0
-            }
-        ]
+
+        avgEntryPrice=0,
+        bankruptPrice=0,
+        breakEvenPrice=0,
+        currentComm=0,
+        currentCost=0,
+        currentQty=0,
+        deleveragePercentile=0,
+        execBuyCost=0,
+        execBuyQty=0,
+        execComm=0,
+        execCost=0,
+        execQty=0,
+        execSellCost=0,
+        execSellQty=0,
+        foreignNotional=0,
+        grossExecCost=0,
+        grossOpenCost=0,
+        grossOpenPremium=0,
+        homeNotional=0,
+        indicativeTax=0,
+        indicativeTaxRate=0,
+        initMargin=0,
+        initMarginReq=0,
+        isOpen=0,
+        lastPrice=0,
+        lastValue=0,
+        leverage=0,
+        liquidationPrice=0,
+        longBankrupt=0,
+        maintMargin=0,
+        maintMarginReq=0,
+        marginCallPrice=0,
+        markPrice=0,
+        markValue=0,
+        openOrderBuyCost=0,
+        openOrderBuyPremium=0,
+        openOrderBuyQty=0,
+        openOrderSellCost=0,
+        openOrderSellPremium=0,
+        openOrderSellQty=0,
+        openingComm=0,
+        openingCost=0,
+        openingQty=0,
+        posAllowance=0,
+        posComm=0,
+        posCost=0,
+        posCost2=0,
+        posCross=0,
+        posInit=0,
+        posLoss=0,
+        posMaint=0,
+        posMargin=0,
+        posState=0,
+        prevClosePrice=0,
+        prevRealisedPnl=0,
+        prevUnrealisedPnl=0,
+        realisedCost=0,
+        realisedGrossPnl=0,
+        realisedPnl=0,
+        realisedTax=0,
+        rebalancedPnl=0,
+        riskLimit=0,
+        riskValue=0,
+        sessionMargin=0,
+        shortBankrupt=0,
+        simpleCost=0,
+        simplePnl=0,
+        simplePnlPcnt=0,
+        simpleQty=0,
+        simpleValue=0,
+        targetExcessMargin=0,
+        taxBase=0,
+        taxableMargin=0,
+        unrealisedCost=0,
+        unrealisedGrossPnl=0,
+        unrealisedPnl=0,
+        unrealisedPnlPcnt=0,
+        unrealisedRoePcnt=0,
+        unrealisedTax=0,
+        varMargin=0,
+    ):
+        self.account=account
+
+        self.avgEntryPrice=avgEntryPrice
+        self.bankruptPrice=bankruptPrice
+        self.breakEvenPrice=breakEvenPrice
+
+        self.currentComm=currentComm # amount of cost 
+        self.currentCost=currentCost
+        self.currentQty=currentQty
+
+        self.execBuyCost=execBuyCost
+        self.execBuyQty=execBuyQty
+        self.execComm=execComm
+        self.execCost=execCost
+        self.execQty=execQty
+        self.execSellCost=execSellCost
+        self.execSellQty=execSellQty
+        self.foreignNotional=foreignNotional
+        self.grossExecCost=grossExecCost
+        self.grossOpenCost=grossOpenCost
+        self.grossOpenPremium=grossOpenPremium
+        self.homeNotional=homeNotional
+        self.indicativeTax=indicativeTax
+        self.indicativeTaxRate=indicativeTaxRate
+        self.initMargin=initMargin
+        self.initMarginReq=initMarginReq
+        self.isOpen=isOpen
+        self.lastPrice=lastPrice
+        self.lastValue=lastValue
+        self.leverage=leverage
+        self.liquidationPrice=liquidationPrice
+        self.longBankrupt=longBankrupt
+        self.maintMargin=maintMargin
+        self.maintMarginReq=maintMarginReq
+        self.marginCallPrice=marginCallPrice
+        self.markPrice=markPrice
+        self.markValue=markValue
+
+        self.openOrderBuyCost=openOrderBuyCost
+        self.openOrderBuyPremium=openOrderBuyPremium
+        self.openOrderBuyQty=openOrderBuyQty
+        self.openOrderSellCost=openOrderSellCost
+        self.openOrderSellPremium=openOrderSellPremium
+        self.openOrderSellQty=openOrderSellQty
+        self.openingComm=openingComm
+        self.openingCost=openingCost
+        self.openingQty=openingQty
+
+        self.posAllowance=posAllowance
+        self.posComm=posComm
+        self.posCost=posCost
+        self.posCost2=posCost2
+        self.posCross=posCross
+        self.posInit=posInit
+        self.posLoss=posLoss
+        self.posMaint=posMaint
+        self.posMargin=posMargin
+
+        self.prevClosePrice=prevClosePrice
+        self.prevRealisedPnl=prevRealisedPnl
+        self.prevUnrealisedPnl=prevUnrealisedPnl
+
+        self.realisedCost=realisedCost
+        self.realisedGrossPnl=realisedGrossPnl
+        self.realisedPnl=realisedPnl
+        self.realisedTax=realisedTax
+        self.rebalancedPnl=rebalancedPnl
+        self.riskLimit=riskLimit
+        self.riskValue=riskValue
+        self.sessionMargin=sessionMargin
+        self.shortBankrupt=shortBankrupt
+        self.simpleCost=simpleCost
+        self.simplePnl=simplePnl
+        self.simplePnlPcnt=simplePnlPcnt
+        self.simpleQty=simpleQty
+        self.simpleValue=simpleValue
+        self.targetExcessMargin=targetExcessMargin
+        self.taxBase=taxBase
+        self.taxableMargin=taxableMargin
+        self.unrealisedCost=unrealisedCost
+        self.unrealisedGrossPnl=unrealisedGrossPnl
+        self.unrealisedPnl=unrealisedPnl
+        self.unrealisedPnlPcnt=unrealisedPnlPcnt
+        self.unrealisedRoePcnt=unrealisedRoePcnt
+        self.unrealisedTax=unrealisedTax
+        self.varMargin=varMargin

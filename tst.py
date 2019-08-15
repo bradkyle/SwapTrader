@@ -1,6 +1,6 @@
 import wandb
 from wandb.tensorflow import WandbHook
-wandb.init(project="distswaptrader")
+wandb.init(project="testing")
 import uuid
 import os
 import gym
@@ -19,7 +19,7 @@ from stable_baselines.common.policies import MlpLnLstmPolicy, CnnPolicy, MlpPoli
 from stable_baselines.common.vec_env import SubprocVecEnv, DummyVecEnv
 from stable_baselines import A2C, ACKTR, PPO2, DDPG, ACER
 from stable_baselines.ddpg.policies import LnMlpPolicy, LnCnnPolicy
-from env.DistSwapTradingEnv2 import DistSwapTradingEnv
+from env.DistSwapTradingEnv3 import DistSwapTradingEnv
 import random
 from random import shuffle
 import csv
@@ -31,14 +31,14 @@ np.set_printoptions(threshold=sys.maxsize)
 
 agent_id = str(uuid.uuid4())
 
-wandb.config.leverage = 30
+wandb.config.leverage = 70
 wandb.config.initial_balance = 10
 wandb.config.maker_commission = -0.00025
 wandb.config.taker_commission = 0.00075
-wandb.config.reward_func = None
+wandb.config.reward_func = 'sortino'
 wandb.config.state_buffer_size = 300
 wandb.config.evaluation_history_size = 300
-wandb.config.account_history_size = 300
+wandb.config.account_history_size = 3
 wandb.config.scaler_high = 255
 wandb.config.min_margin_ratio = 0.005
 wandb.config.enable_decay = False
@@ -52,10 +52,10 @@ wandb.config.include_account = False
 wandb.config.min_consec_steps = 0
 wandb.config.num_actions = 2
 wandb.config.obs_type = 'obs_1'
-wandb.config.train_data_file = './data/NODIFF_DATA.parquet'
-wandb.config.test_data_file = './data/NODIFF_TEST.parquet'
-wandb.config.env_name = 'DistSwapTradingEnv2'
-wandb.config.train_steps = 137000
+wandb.config.train_data_file = './data/NODIFF_TEST.parquet'
+wandb.config.test_data_file = './data/NODIFF_DATA.parquet'
+wandb.config.env_name = 'DistSwapTradingEnv3'
+wandb.config.train_steps = 60000
 wandb.config.agent_id = agent_id
 
 env = DummyVecEnv(
