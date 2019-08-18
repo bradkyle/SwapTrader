@@ -111,10 +111,11 @@ class DistSwapTradingEnv(gym.Env):
     viewer = None
 
     randomize_values = {
-        "leverage": [10,20,30,40,50,60,70,80,90],
-        "initial_balance": [0.1, 0.5, 1.0, 1.5, 2],
+        "leverage": [1,5,10,30,60,90],
+        "initial_balance": [0.1, 0.5, 1.0, 1.5, 2], # random between 0.01 and 10
         "commission": [-0.00025, 0.0, 0.00025, 0.0005, 0.00075],
-        "execution_certainty": [0.25, 0.5, 0.75, 1]
+        "execution_certainty": [0.25, 0.5, 0.75, 1],
+        "face_value": [1, 100]
     }
 
     def __init__(
@@ -128,6 +129,7 @@ class DistSwapTradingEnv(gym.Env):
         self.data_file = kwargs.get('data_file', '../data/test.parquet')
         self.leverage = kwargs.get('leverage', 30)
         self.initial_balance = kwargs.get('initial_balance', 10)
+        self.max_episode_length = kwargs.get('max_episode_length', 10000)
         self.reward_func = kwargs.get('reward_func', 'B')
         self.taker_fee = kwargs.get('taker_fee', 0.00075)
         self.maker_fee = kwargs.get('maker_fee', -0.00025)
@@ -463,6 +465,7 @@ class DistSwapTradingEnv(gym.Env):
         
         
     def reset(self):
+        self.current_episode = 0
         self.state_buffer.clear()
         self.net_worths.clear()
         self.current_step = self.state_buffer_size + 1
@@ -478,9 +481,12 @@ class DistSwapTradingEnv(gym.Env):
         if self.randomize and self.training:
             self.leverage = random.choice(self.randomize_values['commission'])
             self.initial_balance = random.choice(self.randomize_values['commission'])
-            self.commission = random.choice(self.randomize_values['commission'])
+            self.taker_fee = random.choice(self.randomize_values['taker_fee'])
+            self.maker_fee = random.choice(self.randomize_values['maker_fee'])
             self.execution_certainty = random.choice(self.randomize_values['execution_certainty'])
             self.balance_entropy = random.choice(self.randomize_values['balance_entropy'])
+            self.consec_steps = random.choice(self.randomize_values['consec_steps'])
+            self.consec_steps = random.choice(self.randomize_values['consec_steps'])
 
         # TODO state buffer initialization
         default_account = Account(
